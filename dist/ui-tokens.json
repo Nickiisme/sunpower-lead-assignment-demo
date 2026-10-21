@@ -1,0 +1,224 @@
+{
+  "specVersion": "2.3",
+  "date": "2026-10-20",
+  "status": "typography-family-implemented-role-residual-pending-other-ui-planned",
+  "unit": "css-px",
+  "platform": {
+    "admin": {
+      "primary": "#3562ff",
+      "primaryRgb": [
+        53,
+        98,
+        255
+      ],
+      "light3": "#5a7dff",
+      "light5": "#7e99ff",
+      "light7": "#a3b5ff",
+      "light8": "#c0caff",
+      "light9": "#dee2ff",
+      "dark2": "#2847cc"
+    },
+    "web": {
+      "primary": "#3042c4",
+      "primaryRgb": [
+        48,
+        66,
+        196
+      ],
+      "light3": "#6e7bd6",
+      "light5": "#98a1e2",
+      "light7": "#c1c6ed",
+      "light8": "#d6d9f3",
+      "light9": "#eaecf9",
+      "dark2": "#26359d"
+    }
+  },
+  "scene": {
+    "detail": {
+      "controlHeight": 36,
+      "fontSize": 14,
+      "lineHeight": 20,
+      "labelGap": 9,
+      "rowGap": 18,
+      "columnGap": 27,
+      "formPadding": 27,
+      "groupGap": 27,
+      "sectionGap": 36,
+      "inputPaddingX": 13.5,
+      "helpGap": 4.5,
+      "textareaMinHeight": 108,
+      "actionHeight": 36,
+      "labelFontSize": 14,
+      "labelLineHeight": 20
+    },
+    "drawer": {
+      "controlHeight": 36,
+      "fontSize": 14,
+      "lineHeight": 20,
+      "labelGap": 9,
+      "rowGap": 18,
+      "columnGap": 27,
+      "formPadding": 27,
+      "groupGap": 27,
+      "sectionGap": 36,
+      "inputPaddingX": 13.5,
+      "helpGap": 4.5,
+      "textareaMinHeight": 108,
+      "actionHeight": 36,
+      "labelFontSize": 14,
+      "labelLineHeight": 20
+    },
+    "dialog": {
+      "controlHeight": 32,
+      "fontSize": 14,
+      "lineHeight": 20,
+      "labelGap": 8,
+      "rowGap": 16,
+      "columnGap": 24,
+      "formPadding": 24,
+      "groupGap": 24,
+      "sectionGap": 32,
+      "inputPaddingX": 12,
+      "helpGap": 4,
+      "textareaMinHeight": 96,
+      "actionHeight": 32,
+      "labelFontSize": 14,
+      "labelLineHeight": 20
+    },
+    "filter": {
+      "controlHeight": 32,
+      "fontSize": 14,
+      "lineHeight": 20,
+      "labelFontSize": 12,
+      "labelLineHeight": 18,
+      "labelGap": 6,
+      "rowGap": 16,
+      "columnGap": 24,
+      "formPadding": 16,
+      "actionHeight": 32,
+      "groupGap": 16,
+      "sectionGap": 16,
+      "inputPaddingX": 12,
+      "helpGap": 4
+    },
+    "tableInline": {
+      "controlHeight": 24,
+      "fontSize": 12,
+      "lineHeight": 20,
+      "inputPaddingX": 8,
+      "helpGap": 4,
+      "cellPaddingX": 12
+    },
+    "pagination": {
+      "controlHeight": 24,
+      "fontSize": 12,
+      "lineHeight": 20
+    },
+    "external": {
+      "densityPolicy": "preserve-existing",
+      "themePolicy": "shared-platform-theme",
+      "fontFamilyPolicy": "shared-Lexend-Deca-and-fallback",
+      "fontWeightPolicy": "preserve-specific-existing-design-only",
+      "nestedFormPolicy": "standard-scene"
+    },
+    "navigation": {
+      "densityPolicy": "not-a-form"
+    },
+    "preview": {
+      "densityPolicy": "content-specific"
+    }
+  },
+  "button": {
+    "list": {
+      "height": 32,
+      "fontSize": 14,
+      "lineHeight": 20,
+      "paddingX": 12,
+      "gap": 8,
+      "radius": 4,
+      "fontWeight": 500
+    },
+    "delete": {
+      "enabled": "#c93535",
+      "disabled": "#fab6b6",
+      "text": "#ffffff"
+    }
+  },
+  "multipleSelect": {
+    "maxVisibleTags": 3,
+    "maxChipWidth": 120,
+    "chipHeight": 20,
+    "chipGap": 4,
+    "preferredMinChipWidth": 72,
+    "narrowPolicy": "reduce-visible-tags-then-summary",
+    "modelTruncation": false,
+    "wrap": false,
+    "fullValueAccess": [
+      "tooltip",
+      "keyboard-accessible-full-list"
+    ],
+    "fontSize": 12,
+    "lineHeight": 16
+  },
+  "focus": {
+    "policy": "preserve-existing-component-focus",
+    "addOuterRing": false,
+    "changeStructure": false,
+    "themeColorOnly": true
+  },
+  "shape": {
+    "controlRadius": 4,
+    "panelRadius": 8,
+    "borderWidth": 1
+  },
+  "footer": {
+    "dialogMinHeight": 64,
+    "drawerMinHeight": 72
+  },
+  "semanticColors": {
+    "Text": "#303744",
+    "Secondary": "#596579",
+    "Canvas": "#f5f6f8",
+    "Surface": "#ffffff",
+    "Control border": "#7f8b9e",
+    "Readonly": "#f4f6fa",
+    "Table header": "#e0e4f2",
+    "Success": "#16734b",
+    "Warning": "#8c5c08",
+    "Danger": "#c93535",
+    "Delete disabled": "#fab6b6",
+    "Divider": "#e8ebf0"
+  },
+  "typography": {
+    "family": "Lexend Deca",
+    "cssFamily": "\"Lexend Deca\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"Noto Sans CJK SC\", \"WenQuanYi Micro Hei\", Arial, sans-serif",
+    "defaultWeight": 400,
+    "weights": {
+      "light": 300,
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "extrabold": 800,
+      "black": 900
+    },
+    "commonRoles": {
+      "body": 400,
+      "formLabel": 400,
+      "inputValue": 400,
+      "tableBody": 400,
+      "button": 500,
+      "sectionTitle": 600,
+      "dialogTitle": 600,
+      "tableHeader": 600
+    },
+    "fontDisplay": "swap",
+    "source": "local-static-ttf",
+    "sameAcrossPlatforms": true,
+    "webPresentationWeightPolicy": "preserve-registered-existing-design",
+    "webPresentationIsFamilyException": false,
+    "externalDoesNotExemptNestedFormsTablesDialogs": true,
+    "registry": "portal-web/04-设计例外与字体甄别.md",
+    "fallbackIncludesCjk": true
+  }
+}
