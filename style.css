@@ -19,7 +19,7 @@
 .lead-table th:nth-last-child(3),.lead-table td:nth-last-child(3){min-width:145px}
 .assignment-history-link{border:0;background:none;color:var(--purple);font-size:11px;padding:4px 0;white-space:nowrap}
 .lead-table thead th{position:sticky;top:0;z-index:2}
-.lead-table th:nth-last-child(2),.lead-table td:nth-last-child(2){position:sticky;right:270px;width:145px;min-width:145px;box-shadow:-1px 0 0 var(--line)}
+.lead-table th:nth-last-child(2),.lead-table td:nth-last-child(2){position:sticky;right:270px;width:145px;min-width:145px;box-shadow:-1px 0 0 var(--line),-9px 0 16px -9px rgba(36,38,53,.24)}
 .lead-table th:last-child,.lead-table td:last-child{position:sticky;right:0;width:270px;min-width:270px}
 .lead-table th:nth-last-child(-n+2){z-index:4;background:#f8f9fc}
 .lead-table td:nth-last-child(-n+2){z-index:1;background:#fff}
