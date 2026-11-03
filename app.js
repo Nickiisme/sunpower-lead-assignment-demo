@@ -145,6 +145,18 @@ function leadRow(l){
  const actions=direct.map(action=>actionButton(action,l)).join('')+(menu.length?`<button class="more" data-action="more" data-id="${esc(l.id)}" aria-label="More actions for ${esc(l.name)}" aria-haspopup="menu" aria-expanded="false">⋯</button>`:'');
  return `<tr><td>${esc(firstName)}</td><td>${esc(lastName)}</td><td>${esc(l.email)}</td><td>${esc(l.telephone)}</td><td><span class="leadno">${esc(l.id)}</span></td><td>${esc(l.leadType)}</td><td>${esc(l.source)}</td><td>${esc(l.country)}</td><td>${esc(l.salesRepresentative)}</td><td>${assignedToCell(l)}</td><td>${esc(l.createdBy)}</td><td>${esc(dateTime(l.createdAt))}</td><td>${esc(l.lastUpdatedBy)}</td><td>${esc(dateTime(l.lastUpdatedAt))}</td><td><button class="assignment-history-link" data-action="assignment-history" data-id="${l.id}" aria-label="Assignment history for ${esc(l.name)}">View history (${assignmentEvents(l).length})</button></td><td>${stageTimeCell(l)}</td><td><span class="pill ${stageClass}">${esc(l.stage)}</span></td><td><div class="actions">${actions}</div></td></tr>`;
 }
+const leadTableScroll=document.querySelector('.table-scroll');
+function syncStickyShadow(){
+ const remaining=leadTableScroll.scrollWidth-leadTableScroll.clientWidth-leadTableScroll.scrollLeft;
+ leadTableScroll.classList.toggle('has-hidden-right',remaining>1);
+}
+leadTableScroll.addEventListener('scroll',syncStickyShadow,{passive:true});
+window.addEventListener('resize',syncStickyShadow);
+if('ResizeObserver' in window){
+ const tableResizeObserver=new ResizeObserver(syncStickyShadow);
+ tableResizeObserver.observe(leadTableScroll);
+ tableResizeObserver.observe(leadTableScroll.querySelector('table'));
+}
 function render(){
  closeActionMenu();
  const ls=visibleLeads(),pending=ls.filter(l=>l.stage==='Pending Claim').length,claimed=ls.filter(l=>l.stage==='Claimed').length,qualified=ls.filter(l=>l.stage==='Qualified').length;
@@ -153,6 +165,7 @@ function render(){
  for(const b of document.querySelectorAll('.tab')){b.classList.toggle('active',b.dataset.tab===tab);b.setAttribute('aria-selected',b.dataset.tab===tab)}
  const rows=filtered();$('empty').hidden=rows.length>0;$('resultCount').textContent=`Showing ${rows.length} of ${ls.length} Portal leads`;
  $('leads').innerHTML=rows.slice(0,10).map(leadRow).join('');
+ syncStickyShadow();
 }
 function selectedUserIds(){return[...$('targetUserMenu').querySelectorAll('input[type=checkbox]:checked')].map(input=>input.value)}
 function syncUserPicker(){const ids=selectedUserIds(),names=ids.map(id=>people[id].name);$('targetUserSummary').textContent=names.length?names.join(', '):'Select company users';$('targetUserTrigger').title=names.join(', ')}
