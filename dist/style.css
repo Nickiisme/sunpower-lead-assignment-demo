@@ -10,7 +10,7 @@
 
 /* Keep the current Portal list fields while pinning status and actions on wide screens. */
 .filter-field input[type=date]{width:100%;height:38px;border:1px solid #e1e3eb;border-radius:6px;background:#fff;color:#55596c;padding:0 11px;outline:none}
-.lead-table{min-width:2920px}
+.lead-table{min-width:2920px;border-collapse:separate;border-spacing:0}
 .lead-table th:nth-child(3),.lead-table td:nth-child(3){min-width:210px}
 .lead-table th:nth-child(9),.lead-table td:nth-child(9){min-width:170px}
 .lead-table th:nth-child(10),.lead-table td:nth-child(10){min-width:180px}
@@ -19,12 +19,13 @@
 .lead-table th:nth-last-child(3),.lead-table td:nth-last-child(3){min-width:145px}
 .assignment-history-link{border:0;background:none;color:var(--purple);font-size:11px;padding:4px 0;white-space:nowrap}
 .lead-table thead th{position:sticky;top:0;z-index:2}
-.lead-table th:nth-last-child(2),.lead-table td:nth-last-child(2){position:sticky;right:270px;width:145px;min-width:145px;box-shadow:-1px 0 0 var(--line),-9px 0 16px -9px rgba(36,38,53,.24)}
+.lead-table th:nth-last-child(2),.lead-table td:nth-last-child(2){position:sticky;right:270px;width:145px;min-width:145px;box-shadow:-1px 0 0 #d7d9e3}
+.lead-table th:nth-last-child(2)::before,.lead-table td:nth-last-child(2)::before{content:"";position:absolute;top:0;bottom:0;left:-22px;width:30px;pointer-events:none;background:linear-gradient(to right,rgba(36,38,53,0),rgba(36,38,53,.26) 73%,rgba(36,38,53,0))}
 .lead-table th:last-child,.lead-table td:last-child{position:sticky;right:0;width:270px;min-width:270px}
 .lead-table th:nth-last-child(-n+2){z-index:4;background:#f8f9fc}
 .lead-table td:nth-last-child(-n+2){z-index:1;background:#fff}
 .lead-table tr:hover td:nth-last-child(-n+2){background:#fdfdff}
-@media(max-width:700px){.lead-table th:nth-last-child(2),.lead-table td:nth-last-child(2),.lead-table th:last-child,.lead-table td:last-child{position:static;box-shadow:none}}
+@media(max-width:700px){.lead-table th:nth-last-child(2),.lead-table td:nth-last-child(2),.lead-table th:last-child,.lead-table td:last-child{position:static;box-shadow:none}.lead-table th:nth-last-child(2)::before,.lead-table td:nth-last-child(2)::before{display:none}}
 
 .tablebox>.toolbar{min-height:66px;padding-top:8px;padding-bottom:8px}
 
